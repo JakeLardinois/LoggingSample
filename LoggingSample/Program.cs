@@ -17,6 +17,8 @@ namespace LoggingSample
         static void Main(string[] args)
         {
             ConfigureLogging();
+
+            var classInstance = new MyClass();
         }
 
         private static void ConfigureLogging()
