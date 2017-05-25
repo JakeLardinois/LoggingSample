@@ -26,7 +26,7 @@ namespace LoggingSample
             //Could add some more properties to log here if you want to...
             IDictionary<string, object> loggingProperties = new Dictionary<string, object>();
 
-            var mappedPath = ServicePath + "app.config";
+            var mappedPath = ServicePath + "LoggingSample.exe.config";
             LogManager.Configure(mappedPath, loggingProperties);
 
             Logger.Info("Logging Started...");
