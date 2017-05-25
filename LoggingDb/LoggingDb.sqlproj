@@ -66,4 +66,7 @@
   <ItemGroup>
     <RefactorLog Include="LoggingDb.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SchemaCompare.scmp" />
+  </ItemGroup>
 </Project>
