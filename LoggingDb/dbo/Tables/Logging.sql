@@ -1,12 +1,19 @@
 ﻿CREATE TABLE [dbo].[Logging] (
-    [Id]        BIGINT         IDENTITY (1, 1) NOT NULL,
-    [DateStamp] DATETIME       NOT NULL,
-    [Thread]    VARCHAR (255)  NOT NULL,
-    [ErrLevel]  VARCHAR (20)   NOT NULL,
-    [Logger]    VARCHAR (255)  NOT NULL,
-    [Message]   VARCHAR (4000) NOT NULL,
-    [AppName]   VARCHAR (50)   NULL,
-    [Exception] VARCHAR (8000) NULL,
-    CONSTRAINT [PK_Loggging] PRIMARY KEY CLUSTERED ([Id] ASC)
+    [Id]            INT             IDENTITY (1, 1) NOT NULL,
+    [Date]          DATETIME        NOT NULL,
+    [Thread]        VARCHAR (255)   NOT NULL,
+    [Level]         VARCHAR (50)    NOT NULL,
+    [Logger]        VARCHAR (255)   NOT NULL,
+    [Message]       VARCHAR (4000)  NOT NULL,
+    [Exception]     VARCHAR (2000)  NULL,
+    [Method]        NVARCHAR (50)   NULL,
+    [Line]          NVARCHAR (10)   NULL,
+    [RequestPath]   NVARCHAR (4000) NULL,
+    [RequestMethod] NVARCHAR (10)   NULL,
+    [SessionId]     NVARCHAR (50)   NULL,
+    [Application]   NVARCHAR (50)   NULL,
+    CONSTRAINT [PK_Logging] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
